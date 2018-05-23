@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* HEADER */
+header {
+    margin: 100px 0 70px 0;
+}
+
+header > h1 {
+    font-size: 52px;
+    font-weight: bold;
+}
+
+
+/* MAIN */
+main {
+    background-color: #f9f9f9;
+}
+
+.first, .second {
+    padding-top: 60px;
+}
+
+main h2 {
+    font-size: 18px;
+    color: #d3d3d3;
+    font-weight: bold;
+}
+
+main .first button {
+    background-color: #fff;
+    margin: 20px 60px 20px 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+main .first button img {
+    padding: 5px 20px;
+}
+
+.boy {
+    margin: 20px 30px 60px 0px;
+}
+
+.boy > p {
+    font-weight: bold;
+    text-align: center;
+}
+
+.boy > button {
+    align-items: center;
+}
+
+.boy > button > img {
+    width: 100%;
+    padding: 15px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+form h6 {
+    text-align: right;
+}

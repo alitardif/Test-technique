@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Test technique</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <header class="container">
+            <h1>Parlez nous de votre cible</h1>
+        </header>
+
+        <main id="main" class="container-fluid">
+            <div class="container">
+                <div class="first">
+                    <h2>Cible</h2>
+                    <div class="row">
+                        <button type="button" class="btn" data-toggle="collapse" data-target="#B2B">
+                            <figure>
+                                <figcaption>B2B</figcaption>
+                                <img src="img/factory.png" alt="B2B" title="B2B">
+                            </figure>
+                        </button>
+
+                        <button type="button" class="btn" data-toggle="collapse" data-target="#B2C">
+                            <figure>
+                                <figcaption>B2C</figcaption>
+                                <img src="img/factory.png" alt="B2C" title="B2C">
+                            </figure>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="B2B" class="collapse second" data-parent="#main">
+                    <h2>B2B</h2>
+                    <div class="row">
+                        <div class="col-lg-2 boy">
+                            <p>Entreprise</p>
+                            <button type="button" class="btn card">
+                                <img src="img/boy.png" alt="Entreprise" title="Entreprise">
+                            </button>
+                        </div>
+
+                        <div class="col-lg-2 boy">
+                            <p>Association</p>
+                            <button type="button" class="btn card">
+                                <img src="img/boy.png" alt="Association" title="Association">
+                            </button>
+                        </div>
+
+                        <div class="col-lg-2 boy">
+                            <p>Public</p>
+                            <button type="button" class="btn card">
+                                <img src="img/boy.png" alt="Public" title="Public">
+                            </button>
+                        </div>
+
+                        <div class="col-lg-2 boy">
+                            <p>Autres</p>
+                            <button type="button" class="btn card">
+                                <img src="img/boy.png" alt="Autres" title="Autres">
+                            </button>
+                        </div>
+                    </div>
+
+                    <h2>Plus d'informations</h2>
+                    <div class="row">
+                        <form class="col-lg-9" accept-charset="UTF-8" action="" method="POST">
+                            <h6 class="count_message"></h6>
+                            <textarea class="form-control text" name="text" rows="5"></textarea>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="B2C" class="collapse second" data-parent="#main">
+                    <h2>B2C</h2>
+                    <div class="row">
+                        <div class="col-lg-2 boy">
+                            <p>Homme</p>
+                            <button type="button" class="btn card">
+                                <img src="img/boy.png" alt="Homme" title="Homme">
+                            </button>
+                        </div>
+
+                        <div class="col-lg-2 boy">
+                            <p>Femme</p>
+                            <button type="button" class="btn card">
+                                <img src="img/boy.png" alt="Femme" title="Femme">
+                            </button>
+                        </div>
+
+                        <div class="col-lg-2 boy">
+                            <p>Autre</p>
+                            <button type="button" class="btn card">
+                                <img src="img/boy.png" alt="Autre" title="Autre">
+                            </button>
+                        </div>
+                    </div>
+
+                    <h2>Plus d'informations</h2>
+                    <div class="row">
+                        <form class="col-lg-9" accept-charset="UTF-8" action="" method="POST">
+                            <h6 class="count_message"></h6>
+                            <textarea class="form-control text" name="text" rows="5"></textarea>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </main>
+    </div>
+
+<script>
+    var text_max = 123;
+
+    $('.count_message').html(text_max + ' mot(s)').css("color", "blue");
+
+    $('.text').keyup(function() {
+      var text_length = $('.show .text').val().trim().split(" ").length;
+      var text_remaining = text_max - text_length;
+
+      $('.show .count_message').html(text_remaining + ' mot(s)');
+      if(text_remaining <= 0) {
+          $('.show .count_message').css("color", "red");
+      }
+      else {
+          $('.show .count_message').css("color", "blue");
+      }
+    });
+</script>
+</body>
+</html>
